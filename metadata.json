@@ -1,0 +1,5 @@
+{
+  "name": "Flora Tissues Inventory",
+  "description": "Professional inventory management system for Flora Tissues products with pallet-aware tracking and transaction logging.",
+  "requestFramePermissions": []
+}
