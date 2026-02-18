@@ -21,15 +21,10 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
+        cache: 'npm'
 
     - name: Install Dependencies
-      run: |
-        # Install everything in package.json
-        npm install --legacy-peer-deps
-        # Make sure webpack-cli is installed for CI
-        npm install --save-dev webpack-cli --yes
+      run: npm install --legacy-peer-deps
 
     - name: Build
-      run: |
-        # Use local webpack-cli to build
-        npx webpack --mode production
+      run: npm run build
